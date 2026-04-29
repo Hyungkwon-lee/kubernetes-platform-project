@@ -5,6 +5,11 @@ Jenkins + Docker Hub + Kubernetes 기반 CI/CD 파이프라인 구축 프로젝�
 
 ---
 
+## 서비스 구조
+![K8s 서비스 구조](./docs/k8s-service.png)
+
+---
+
 ## CI/CD 흐름
 
 GitHub (main) → Maven Build → Docker Build → Docker Hub Push → kubectl rolling update
