@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: user3-was
+  labels: 
+    owner: user3
+    app: was

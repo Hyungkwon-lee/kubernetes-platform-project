@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user3-was
+  namespace: user3-was
+  labels:
+    app: was
+    owner: user3
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: was
+      owner: user3
+  template:
+    metadata:
+      labels:
+        app: was
+        owner: user3
+    spec:
+      containers:
+        - name: user3-was
+          image: hklee2748/spring-petclinic:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: http
+          volumeMounts:
+            - name: was-data
+              mountPath: /app/data
+      volumes:
+        - name: was-data
+          persistentVolumeClaim:
+            claimName: user3-was-pvc

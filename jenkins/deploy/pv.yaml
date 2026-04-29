@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-user3-jenkins
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  storageClassName: nfs
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: 192.168.20.20
+    path: /mnt/nfs_share/jenkins/user3

@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user3-jenkins
+  namespace: user3-jenkins
+  labels:
+    app: jenkins
+    owner: user3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins
+      owner: user3
+  template:
+    metadata:
+      labels:
+        app: jenkins
+        owner: user3
+    spec:
+      containers:
+        - name: jenkins
+          image: hklee2748/jenkins:k8s-1.28.15-docker-v3
+          imagePullPolicy: Always
+          securityContext:
+            runAsUser: 0
+          ports:
+            - containerPort: 8080
+              name: http
+            - containerPort: 50000
+              name: agent
+          volumeMounts:
+            - name: jenkins-data
+              mountPath: /var/jenkins_home
+            - name: docker-sock
+              mountPath: /var/run/docker.sock
+      volumes:
+        - name: jenkins-data
+          persistentVolumeClaim:
+            claimName: user3-jenkins-pvc
+        - name: docker-sock
+          hostPath:
+            path: /var/run/docker.sock
+            type: Socket

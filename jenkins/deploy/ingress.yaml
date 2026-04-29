@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: user3-jenkins-ing
+  namespace: user3-jenkins
+  labels:
+    app: jenkins
+    owner: user3
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: jenkins.user3.goping.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: user3-jenkins-svc
+                port:
+                  number: 8080
