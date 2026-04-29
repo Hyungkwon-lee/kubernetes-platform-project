@@ -7,7 +7,7 @@
 ---
 
 ## 파일 구성
-image/
+image
 ├── Dockerfile
 └── install_tools.sh
 
