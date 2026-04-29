@@ -24,6 +24,7 @@ GitHub (main) → Maven Build → Docker Build → Docker Hub Push → kubectl r
 ---
 
 ## 담당 작업
+### 'k8s Cluster' 는 멀티테넌트 구조로 사용하였습니다.
 
 - NFS 서버 구축 및 Worker Node 마운트 설정
 - Jenkins 커스텀 Docker 이미지 설계 및 빌드
