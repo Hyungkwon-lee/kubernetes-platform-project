@@ -16,7 +16,7 @@ GitHub (main) → Maven Build → Docker Build → Docker Hub Push → kubectl r
 | 경로 | 설명 | 문서 |
 |------|------|------|
 | `k8s/` | 클러스터 컴포넌트 (Calico, MetalLB, ingress-nginx) | [k8s.md](./k8s/k8s.md) |
-| `jenkins/image/` | 커스텀 Jenkins 이미지 | [image.md](./jenkins/image.md) |
+| `jenkins/image/` | 커스텀 Jenkins 이미지 | [image.md](./jenkins/image/image.md) |
 | `jenkins/deploy/` | Jenkins 매니페스트 | [deploy.md](./jenkins/deploy.md) |
 | `app/deploy/` | WAS(Spring-PetClinic) 매니페스트 | [deploy.md](./app/deploy.md) |
 | `Jenkinsfile` | CI/CD 파이프라인 전체 정의 | - |
