@@ -13,7 +13,7 @@ namespace → pv → pvc → deployment → service → ingress
 
 ## Jenkins 커스텀 이미지
 이 배포에서 사용하는 이미지는 기본 Jenkins 이미지를 그대로 사용하지 않고 직접 빌드한 커스텀 이미지입니다.  
-→ [커스텀 이미지 상세 보기](../image.md)
+→ [커스텀 이미지 상세 보기](../image/image.md)
 
 ---
 
