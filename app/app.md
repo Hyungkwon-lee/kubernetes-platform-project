@@ -6,7 +6,9 @@ Spring-PetClinic WAS를 쿠버네티스에 배포하기 위한 매니페스트 �
 
 ## 배포 구조
 
+```
 namespace → pv → pvc → deployment → service → ingress
+```
 
 적용 순서대로 의존관계가 있습니다. namespace가 없으면 나머지 리소스를 생성할 수 없고,
 pv가 없으면 pvc가 바인딩되지 않습니다.
