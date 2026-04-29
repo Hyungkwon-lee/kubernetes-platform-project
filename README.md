@@ -1,7 +1,7 @@
 # kubernetes-platform-project
 
 Jenkins + Docker Hub + Kubernetes 기반 CI/CD 파이프라인 구축 프로젝트입니다.  
-→ 프로젝트 전체 개요는 [infra-portfolio](https://github.com/Hyungkwon-lee/infra-portfloio.git) 참고
+→ 프로젝트 전체 개요는 [infra-portfolio](https://github.com/Hyungkwon-lee/infra-portfolio.git) 참고
 
 ---
 
