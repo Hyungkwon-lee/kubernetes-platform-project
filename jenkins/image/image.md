@@ -7,9 +7,12 @@
 ---
 
 ## 파일 구성
+
+```
 image
 ├── Dockerfile
 └── install_tools.sh
+```
 
 ---
 
