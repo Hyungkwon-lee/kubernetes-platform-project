@@ -7,7 +7,9 @@ WAS 배포 구성과 대부분 유사하지만, Docker 빌드 실행을 위한 �
 
 ## 배포 구조
 
+```
 namespace → pv → pvc → deployment → service → ingress
+```
 
 ## Jenkins 커스텀 이미지
 이 배포에서 사용하는 이미지는 기본 Jenkins 이미지를 그대로 사용하지 않고 직접 빌드한 커스텀 이미지입니다.  
